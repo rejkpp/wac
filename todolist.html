@@ -7,7 +7,7 @@
 
   <body>
     <script>
-      var todo = [
+      var todos = [
         {todoText: 'item 1', completed: false},
         {todoText: 'item 2', completed: false},
         {todoText: 'item 3', completed: false}
@@ -15,8 +15,8 @@
 
       console.log(todos);
 
-      function add(todo) {
-        todos.push(todo);
+      function addTodo(initialTodoText) {
+        todos.push({todoText: initialTodoText, completed: false});
         console.log(todos);
       }
 
