@@ -1,30 +1,37 @@
 <!doctype html>
 
-<html lang=en-us>
+<html>
   <head>
     <title>practical javascript</title>
   </head>
-  <body
-    <script
+
+  <body>
+    <script>
       var todos = ['item 1','item 2','item 3'];
 
-      console.log(todos);
-
-      function add(todo){
-        todos.push(todos);
-        console.log(todos);
-      }
-
-      function edit(position, newValue){
-        todos[position] = newValue;
-        console.log(todos);
-      }
-
-      function remove(position){
-        todos.splice(position, 1);
-        console.log(todos);
+      // it should have a function to display todos.
+      function displayTodos() {
+        console.log('my todos:', todos);
       }
       
+      // it should have a function to add todos.
+      function addTodo(todo) {
+        todos.push(todo);
+        displayTodos();
+      }
+
+      // it should have a function to change todos.
+      function changeTodo(position, newValue) {
+        todos[position] = newValue;
+        displayTodos();
+      }
+
+      // it should have a function to delete todos.
+      function deleteTodo(position) {
+        todos.splice(position, 1);
+        displayTodos();
+      }
+
     </script>
   </body>
 </html>
