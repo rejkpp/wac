@@ -7,29 +7,27 @@
 
   <body>
     <script>
-      var todos = ['item 1','item 2','item 3'];
+      var todo = [
+        {todoText: 'item 1', completed: false},
+        {todoText: 'item 2', completed: false},
+        {todoText: 'item 3', completed: false}
+      ]
 
-      // it should have a function to display todos.
-      function displayTodos() {
-        console.log('my todos:', todos);
-      }
-      
-      // it should have a function to add todos.
-      function addTodo(todo) {
+      console.log(todos);
+
+      function add(todo) {
         todos.push(todo);
-        displayTodos();
+        console.log(todos);
       }
 
-      // it should have a function to change todos.
-      function changeTodo(position, newValue) {
+      function edit(position, newValue) {
         todos[position] = newValue;
-        displayTodos();
+        console.log(todos);
       }
 
-      // it should have a function to delete todos.
-      function deleteTodo(position) {
+      function remove(position) {
         todos.splice(position, 1);
-        displayTodos();
+        console.log(todos);
       }
 
     </script>
