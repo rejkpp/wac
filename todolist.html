@@ -30,6 +30,20 @@
         console.log(todos);
       }
 
+      // function toggleTodo (position,newCompletedValue) {
+      //   todos[position].completed = newCompletedValue;
+      //   console.log(todos);
+      // }
+
+      function toggleTodo (position) {
+        // if false make true
+        if (todos[position].completed === false){
+          todos[position].completed = true;
+        } else {
+          todos[position].completed = false;
+        }
+        console.log(todos);
+      }
     </script>
   </body>
 </html>
