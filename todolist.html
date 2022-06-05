@@ -67,6 +67,45 @@
 
         displayTodos();
       }
+
+      // alternative toggleAll function
+      // more compact
+      // 15 lines of code vs 19 lines of code
+      // fewer lines doesn't always mean better. it becomes harder to read what's going on. need to run debugger to understand.
+      // runs fewer iteration. 50% less in 3 out 4 cases.
+      // 4 cases:
+      // 1. all false
+      //     toggleAll    — 6 loops
+      //     altToggleAll — 3 loops
+      // 2. all true
+      //     toggleAll    — 6 loops
+      //     altToggleAll — 6 loops
+      // 3. mixed — true, false ,false
+      //     toggleAll    — 6 loops
+      //     altToggleAll — 3 loops
+      // 4. mixed — true, true ,false
+      //     toggleAll    — 6 loops
+      //     altToggleAll — 3 loops
+      // this is because it only enters an extra loop for in case #2 when changing all to false
+      // in case 1, 3 and 4 that extra loop never occurs.
+
+      function altToggleAll(){
+        var completedTodos = 0;
+        
+        for (var i = 0; i < todos.length; i++) {
+          if (todos[i].completed === false) {
+            todos[i].completed = true;
+          } else {
+              completedTodos++;
+              if (completedTodos === todos.length) {
+                for (var a = 0; a < todos.length; a++) {
+                todos[a].completed = false;
+               }
+              }
+          }
+        }
+        displayTodos();
+      }
     </script>
   </body>
 </html>
