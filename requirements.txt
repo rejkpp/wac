@@ -1,7 +1,7 @@
 version 5
-[] it should have a function for displaying todos.
-[] displayTodos should show the todoText property.
-[] displayTodos should show the completed property.
+[x] it should have a function for displaying todos.
+[x] displayTodos should show the todoText property.
+[x] displayTodos should show the completed property.
 
 version 4
 [x] it should have a function to toggle a todo.

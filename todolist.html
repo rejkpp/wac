@@ -13,21 +13,21 @@
         {todoText: 'item 3', completed: false}
       ]
 
-      console.log(todos);
-
+      displayTodos();
+        
       function addTodo(initialTodoText) {
         todos.push({todoText: initialTodoText, completed: false});
-        console.log(todos);
+        displayTodos();
       }
 
       function editTodo(position, newTodoText) {
         todos[position].todoText = newTodoText;
-        console.log(todos);
+        displayTodos();
       }
 
       function remove(position) {
         todos.splice(position, 1);
-        console.log(todos);
+        displayTodos();
       }
 
       function toggleTodo (position) {
@@ -36,8 +36,15 @@
         } else {
           todos[position].completed = false;
         }
-        console.log(todos);
+        displayTodos();
       }
+
+      function displayTodos(){
+        for (var i = 0; i < todos.length; i++) {
+          console.log(todos[i]);        
+        }
+      }
+
     </script>
   </body>
 </html>
